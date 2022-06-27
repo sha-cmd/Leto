@@ -16,7 +16,7 @@ After connecting my localhost to the ETL database of the IS, my main program, Le
 
 As a developper, I was already concerned by memory profiling, so I investigated all the processes through the use of memory [memory_profiler](presentation/memory_performance.txt), and through the length of the computation [time_log](presentation/time_performance.txt).
 
-My skills in Openpyxl for Excel, allowed me to work with the Quality Management System (QMS) of the IS, to deliver them an organic table of the performance, in numbers, during each month, ![](Quality_01.png) and also with an annual sum up ![](Quality_02.png)
+My skills in Openpyxl for Excel, allowed me to work with the Quality Management System (QMS) of the IS, to deliver them an organic table of the performance, in numbers, during each month, ![](presentation/Quality_01.png) and also with an annual sum up ![](presentation/Quality_02.png)
 
 The database was very light, and I couldn’t compute heavy machine learning algorithm on it. But I was delighted to do that program and I hope it would be a good proof of my skills in Business Intelligence and Data Science, in 2020.
 
