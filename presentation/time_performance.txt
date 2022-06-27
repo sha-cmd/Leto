@@ -1,0 +1,53 @@
+Bienvenu(e) dans le programme kpi
+Tickets expression s’est bien déroulé
+durée de la phase 1 : 0:03:55.056239
+Scan_cat s’est bien déroulé
+durée de la phase 2 : 0:03:28.191610
+T1 s’est bien déroulé
+durée de la phase 3 : 0:03:36.769779
+T2 s’est bien déroulé
+durée de la phase 4 : 0:03:29.118157
+T3 s’est bien déroulé
+durée de la phase 5 : 0:03:30.273332
+Tr s’est bien déroulé
+durée de la phase 6 : 0:03:27.636839
+Tc s’est bien déroulé
+durée de la phase 7 : 0:03:28.998618
+Trc s’est bien déroulé
+durée de la phase 8 : 0:03:27.785109
+Tt s’est bien déroulé
+durée de la phase 9 : 0:03:29.101287
+Ratio Tt s’est bien déroulé
+Ratio Tt par jour s’est bien déroulé
+KPI s’est bien déroulé pour le process 0
+KPI s’est bien déroulé pour le process 1
+KPI s’est bien déroulé pour le process 2
+KPI s’est bien déroulé pour le process 3
+KPI s’est bien déroulé pour le process 4
+durée de la phase 10 : 0:01:12.371637
+Fichier créé de la qualité
+durée de la phase lambda_process : 0:00:03.329900
+durée de la phase lambda_treatment_time : 0:00:02.759594
+durée de la phase lambda_pec : 0:00:05.039355
+durée de la phase lambda label_tech : 0:00:00.086828
+durée de la phase label_process : 0:00:02.186243
+durée de la phase treatment_time : 0:00:01.632632
+durée de la phase label_pec : 0:00:03.009256
+durée de la phase label_tech : 0:00:00.051824
+durée de la phase moyenne traitement pour intervention : 0:00:10.587946
+durée de la phase moyenne traitement pour ressource : 0:00:06.398728
+durée de la phase moyenne résolution pour scores_res_int_means  : 0:00:54.998000
+durée de la phase moyenne résolution pour scores_res_res_means  : 0:00:54.539505
+durée de la phase moyenne pour résolution P 1  pour tickets : 0:00:56.205832
+durée de la phase moyenne pour résolution P 2  pour tickets : 0:00:57.116995
+durée de la phase moyenne pour résolution P 3  pour tickets : 0:00:54.561196
+durée de la phase moyenne pour résolution P 4  pour tickets : 0:00:54.739109
+durée de la phase moyenne pour traitement P 1  pour tickets : 0:00:32.625147
+durée de la phase moyenne pour traitement P 2  pour tickets : 0:00:32.597250
+durée de la phase moyenne pour traitement P 3  pour tickets : 0:00:32.684460
+durée de la phase moyenne pour traitement P 4  pour tickets : 0:00:32.770004
+durée de la phase moyenne pour ratio P 1  pour tickets : 0:00:33.488123
+durée de la phase moyenne pour ratio P 2  pour tickets : 0:00:34.034972
+durée de la phase moyenne pour ratio P 3  pour tickets : 0:00:32.867627
+durée de la phase moyenne pour ratio P 4  pour tickets : 0:00:33.003527
+durée totale : 0:43:59.547498

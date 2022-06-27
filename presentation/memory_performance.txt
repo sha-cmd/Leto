@@ -1,0 +1,84 @@
+Filename: main.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    21  134.051 MiB  134.051 MiB   @profile
+    22                             def create_kpi(month_start, month_end, year_start, year_end):
+    23                                 """
+    24                                 Lance le programme de data science afin de créer les kpi à partir des
+    25                                 tables de production "demande, prise en charge et suivi intervention,
+    26                                 suivi ressource". Les résultats sont écrit dans de nouvelles tables
+    27                                 (environ 20) et contiennent toutes sortes d’indicateur. La première des
+    28                                 tables est suffixé par le mot data. Le nom de la base de données utilisée
+    29                                 et les properties pour se connecter à la base sont à paramétrer dans le
+    30                                 module do dans le répertoire machine. Il est de plus nécessaire de modifier
+    31                                 le code si l’on veut utiliser un serveur distant, en modifiant le paramètre
+    32                                 nommé local à des fonctions qui accède à la base de données pour qu’elle
+    33                                 écrive sur le serveur de DSI.
+    34                                 """
+    35
+    36  134.055 MiB    0.004 MiB       print('Bienvenu(e) dans le programme kpi')
+    37  134.055 MiB    0.000 MiB       db="helpdesk_data"
+    38                                 #Créé une base de tous les objets et leurs caractéristiques
+    39  134.055 MiB    0.000 MiB       date1 = datetime.datetime.now()
+    40  147.945 MiB   13.891 MiB       kpi.extickets(db=db)
+    41  147.945 MiB    0.000 MiB       date2 = datetime.datetime.now()
+    42  147.945 MiB    0.000 MiB       print('durée de la phase 1 :',date2-date1)
+    43                                 #########################################
+    44                                 ## Génération des catégories          ###
+    45                                 #########################################
+    46  147.945 MiB    0.000 MiB       stats.scan_cat(month_start,month_end, year_start, year_end,\
+    47  148.402 MiB    0.457 MiB                      file_name='helpdesk_kpi_tables_quantite.xlsx')
+    48  148.402 MiB    0.000 MiB       date3 = datetime.datetime.now()
+    49  148.402 MiB    0.000 MiB       print('durée de la phase 2 :',date3-date2)
+    50                                 #########################################
+    51                                 ## Calculer t1 et le mettre en base #####
+    52                                 #########################################
+    53  148.402 MiB    0.000 MiB       stats.scan_cat_t1(month_start,month_end,year_start,year_end,\
+    54  148.188 MiB    0.000 MiB                         file_name='data_t1.xlsx')
+    55  148.188 MiB    0.000 MiB       date4 = datetime.datetime.now()
+    56  148.188 MiB    0.000 MiB       print('durée de la phase 3 :',date4-date3)
+    57  148.188 MiB    0.000 MiB       stats.scan_cat_t2(month_start,month_end,year_start,year_end,\
+    58  148.141 MiB    0.000 MiB                         file_name='data_t2.xlsx')
+    59  148.141 MiB    0.000 MiB       date5 = datetime.datetime.now()
+    60  148.141 MiB    0.000 MiB       print('durée de la phase 4 :',date5-date4)
+    61  148.141 MiB    0.000 MiB       stats.scan_cat_t3(month_start,month_end,year_start,year_end,\
+    62  148.109 MiB    0.000 MiB                         file_name='data_t3.xlsx')
+    63  148.109 MiB    0.000 MiB       date6 = datetime.datetime.now()
+    64  148.109 MiB    0.000 MiB       print('durée de la phase 5 :',date6-date5)
+    65  148.109 MiB    0.000 MiB       stats.scan_cat_tr(month_start,month_end,year_start, year_end,\
+    66  148.074 MiB    0.000 MiB                         file_name='data_tr.xlsx')
+    67  148.074 MiB    0.000 MiB       date7 = datetime.datetime.now()
+    68  148.074 MiB    0.000 MiB       print('durée de la phase 6 :',date7-date6)
+    69  148.074 MiB    0.000 MiB       stats.scan_cat_tc(month_start,month_end,year_start,year_end,\
+    70  147.996 MiB    0.000 MiB                         file_name='data_tc.xlsx')
+    71  147.996 MiB    0.000 MiB       date8 = datetime.datetime.now()
+    72  147.996 MiB    0.000 MiB       print('durée de la phase 7 :',date8-date7)
+    73  147.996 MiB    0.000 MiB       stats.scan_cat_trc(month_start,month_end,year_start,year_end,\
+    74  148.012 MiB    0.016 MiB                          file_name='data_trc.xlsx')
+    75  148.012 MiB    0.000 MiB       date9 = datetime.datetime.now()
+    76  148.012 MiB    0.000 MiB       print('durée de la phase 8 :',date9-date8)
+    77  148.012 MiB    0.000 MiB       stats.scan_cat_Tt(month_start,month_end,year_start,year_end,\
+    78  147.992 MiB    0.000 MiB                         file_name='data_Tt.xlsx')
+    79  147.992 MiB    0.000 MiB       date10 = datetime.datetime.now()
+    80  147.992 MiB    0.000 MiB       print('durée de la phase 9 :',date10-date9)
+    81  148.395 MiB    0.402 MiB       stats.moy_tt_by_month(month_start,month_end,year_start,year_end)
+    82  148.434 MiB    0.039 MiB       stats.moy_tt_by_day_in_a_month(month_start,month_end,year_start,year_end)
+    83                                 ####################
+    84                                 ## Faire les KPI  ##
+    85                                 ####################
+    86
+    87  148.781 MiB    0.348 MiB       kpi.make(month_start,month_end,year_start,year_end)
+    88  148.781 MiB    0.000 MiB       date11 = datetime.datetime.now()
+    89  148.781 MiB    0.000 MiB       print('durée de la phase 10 :',date11-date10)
+    90  153.262 MiB    4.480 MiB       qlt.make()
+    91  153.309 MiB    0.047 MiB       indicateur.make()
+    92  154.996 MiB    1.688 MiB       data = pd.read_excel('data.xlsx')
+    93  155.730 MiB    0.734 MiB       groupe.getgroupprop(month_start,month_end,year_start,year_end, data)
+    94  155.762 MiB    0.031 MiB       groupe.getgroupmeans(month_start,month_end,year_start,year_end, data)
+    95  155.863 MiB    0.102 MiB       groupe.getgroupsums(month_start,month_end,year_start,year_end, data)
+    96  159.742 MiB    3.879 MiB       dm.scores(month_start,month_end,year_start,year_end)
+    97  159.742 MiB    0.000 MiB       date12 = datetime.datetime.now()
+    98  159.742 MiB    0.000 MiB       print('durée totale :', date12-date1)
+
+
