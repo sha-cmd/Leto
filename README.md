@@ -1,6 +1,6 @@
 # Leto
 
-## Business Intelligence
+## Business Intelligence
 
 This project presents my work with PowerBI, Python, SQL, Bizagi, Numpy and Pandas. It was my very first project of 5000 LOC, therefore the code could be more factorized, but this project had been stopped because of Covid-19 and so it stayed at the prototype level.
 
